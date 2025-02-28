@@ -16,6 +16,8 @@ const RegisterPage = () => {
   const yupValidationSchema = Yup.object({
     fname: Yup.string().required('First Name is required'),
     lname: Yup.string().required('Last Name is required'),
+    mobile: Yup.string().required('Mobile is required'),
+    address: Yup.string().required('Address is required'),
     email: Yup.string().email('Invalid email format').required('Email is required'),
     password: Yup.string()
       .min(3, 'Password must be at least 3 characters')
@@ -32,6 +34,8 @@ const RegisterPage = () => {
       password: '',
       fname: '',
       lname: '',
+      mobile: '',
+      address: '',
     },
     validationSchema: yupValidationSchema,
     onSubmit: async (values) => {
@@ -90,7 +94,7 @@ const RegisterPage = () => {
                 </h6>
               </div>
               <TextField
-                label="Password"
+                label="First Name"
                 id="outlined-size-small"
                 size="small"
                 className="text-field"
@@ -108,7 +112,7 @@ const RegisterPage = () => {
                 </h6>
               </div>
               <TextField
-                label="Password"
+                label="Last Name"
                 id="outlined-size-small"
                 size="small"
                 className="text-field"
@@ -118,6 +122,44 @@ const RegisterPage = () => {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               />
+            </div>
+            <div className="asd">
+              <div className="text-input-container">
+                <div className="error">
+                  <h6 className="error-texts">
+                    {formik.touched.address && formik.errors.address}
+                  </h6>
+                </div>
+                <TextField
+                  label="Address"
+                  id="outlined-size-small"
+                  size="small"
+                  className="text-field"
+                  name="address"
+                  type="address"
+                  value={formik.values.address}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
+              <div className="text-input-container">
+                <div className="error">
+                  <h6 className="error-texts">
+                    {formik.touched.mobile && formik.errors.mobile}
+                  </h6>
+                </div>
+                <TextField
+                  label="Mobile"
+                  id="outlined-size-small"
+                  size="small"
+                  className="text-field"
+                  name="mobile"
+                  type="mobile"
+                  value={formik.values.mobile}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+              </div>
             </div>
             <div className="text-input-container">
               <div className="error">

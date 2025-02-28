@@ -7,6 +7,16 @@
   right: 20px;
 }
 
+.asd {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+  @media screen and (max-width: $mobile-portrait) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .register {
   min-height: 100vh;
   position: relative;
