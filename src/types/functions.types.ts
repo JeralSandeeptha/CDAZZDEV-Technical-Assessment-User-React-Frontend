@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { IUser } from "./interfaces.types";
+import { AuthRequest, IToken, IUser } from "./interfaces.types";
 import { NavigateFunction } from "react-router-dom";
 
 export type AuthProviderProps = {
@@ -13,3 +13,15 @@ export type RegisterUserFunctionProps = {
     user: IUser,
     navigate: NavigateFunction
 }
+
+export type LoginUserFunctionProps = {
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
+    user: AuthRequest,
+    navigate: NavigateFunction,
+    setLocalStorageItem: (itemName: string, itemData: unknown) => void,
+    setToken: Dispatch<SetStateAction<IToken | null>>
+}
+
+export type HandleLoginFunctionProps = { email: string, password: string };
