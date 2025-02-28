@@ -48,7 +48,9 @@ const LoginPage = () => {
           </Backdrop>
           
           <div className="logo-content">
-            <img src={logo} alt="logo" className="logo" data-testid="logo"/>
+            <Link to='/'>
+              <img src={logo} alt="logo" className="logo" />
+            </Link>
           </div>
 
           <div className="header-section">
@@ -118,8 +120,8 @@ const LoginPage = () => {
         <div className="logo-container">
           <img src={cartLogo} alt="logo-img" className="logo-img" data-testid="logoimg"/>
         </div>
-        <h2 className="right-header" data-testid="mainHeader">Manage thousands of your tasks</h2>
-        <h5 className="right-para" data-testid="mainHeader">Join our platform to manage thousands of your tasks valuable for every minute.</h5>
+        <h2 className="right-header" data-testid="mainHeader">Enroll thousands of valuable courses</h2>
+        <h5 className="right-para" data-testid="mainHeader">Join our platform to access thousands of valuable courses for every skill.</h5>
         <div className="right-users">
           <AvatarGroup max={4} data-testid="avatarGroup">
             <Avatar alt="Remy Sharp" src="https://plus.unsplash.com/premium_photo-1689606093808-3cb4393248d2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />

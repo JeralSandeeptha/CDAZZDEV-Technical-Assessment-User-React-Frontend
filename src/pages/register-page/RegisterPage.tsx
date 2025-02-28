@@ -51,7 +51,9 @@ const RegisterPage = () => {
           </Backdrop>
           
           <div className="logo-content">
-            <img src={logo} alt="logo" className="logo" />
+            <Link to='/'>
+              <img src={logo} alt="logo" className="logo" />
+            </Link>
           </div>
 
           <div className="header-section">
@@ -107,7 +109,7 @@ const RegisterPage = () => {
             <h6 className="questionText">
               Been here before?{' '}
               <span>
-                <Link to="/">Login</Link>
+                <Link to="/login">Login</Link>
               </span>
             </h6>
           </form>
@@ -130,9 +132,9 @@ const RegisterPage = () => {
         <div className="logo-container">
           <img src={cartLogo} alt="logo-img" className="logo-img" />
         </div>
-        <h2 className="right-header">Manage thousands of your tasks</h2>
+        <h2 className="right-header">Enroll thousands of valuable courses</h2>
         <h5 className="right-para">
-        Join our platform to manage thousands of your tasks valuable for every minute.
+        Join our platform to access thousands of valuable courses for every skill.
         </h5>
         <div className="right-users">
           <AvatarGroup max={4}>
