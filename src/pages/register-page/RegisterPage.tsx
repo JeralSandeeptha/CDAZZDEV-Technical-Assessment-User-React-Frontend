@@ -14,6 +14,8 @@ const RegisterPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   
   const yupValidationSchema = Yup.object({
+    fname: Yup.string().required('First Name is required'),
+    lname: Yup.string().required('Last Name is required'),
     email: Yup.string().email('Invalid email format').required('Email is required'),
     password: Yup.string()
       .min(3, 'Password must be at least 3 characters')
@@ -28,6 +30,8 @@ const RegisterPage = () => {
     initialValues: {
       email: '',
       password: '',
+      fname: '',
+      lname: '',
     },
     validationSchema: yupValidationSchema,
     onSubmit: async (values) => {
@@ -75,6 +79,42 @@ const RegisterPage = () => {
                 className="text-field"
                 name="email"
                 value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </div>
+            <div className="text-input-container">
+              <div className="error">
+                <h6 className="error-texts">
+                  {formik.touched.fname && formik.errors.fname}
+                </h6>
+              </div>
+              <TextField
+                label="Password"
+                id="outlined-size-small"
+                size="small"
+                className="text-field"
+                name="fname"
+                type="fname"
+                value={formik.values.fname}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+            </div>
+            <div className="text-input-container">
+              <div className="error">
+                <h6 className="error-texts">
+                  {formik.touched.lname && formik.errors.lname}
+                </h6>
+              </div>
+              <TextField
+                label="Password"
+                id="outlined-size-small"
+                size="small"
+                className="text-field"
+                name="lname"
+                type="lname"
+                value={formik.values.lname}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
               />

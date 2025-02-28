@@ -1,8 +1,8 @@
 import './Navbar.scss';
 import logo from '../../assets/icons/pfizer.png';
-import { Tooltip } from '@mui/material';
+import { Button, Tooltip } from '@mui/material';
 import logout from '../../assets/icons/exit.png';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -22,6 +22,12 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="logo" data-testid='logo'/>
                 </div>
                 <div className='auth-btns'>
+                    <Link to='/account'>
+                        <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>My Account</Button>
+                    </Link>
+                    <Link to='/account'>
+                        <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>My Courses</Button>
+                    </Link>
                     <Tooltip title="Logout" data-testid='tooltip-logout'>
                         <div className="icon-container" onClick={logOutUser}>
                             <img src={logout} alt="logout-icon" className="icon" data-testid='logout'/>

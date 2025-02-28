@@ -4,6 +4,8 @@ import RegisterPage from '../pages/register-page/RegisterPage';
 import LoginPage from '../pages/login-page/LoginPage';
 import DashboardPage from '../pages/dashboard-page/DashboardPage';
 import LandingPage from '../pages/landing-page/LandingPage';
+import MyCourses from '../pages/my-courses/MyCourses';
+import Profile from '../pages/profile/Profile';
 
 const MainNavigation = () => {
 
@@ -25,6 +27,14 @@ const MainNavigation = () => {
         <Route 
           path='/dashboard'   
           element={<DashboardPage />}
+        />
+        <Route 
+          path='/courses'   
+          element={<MyCourses />}
+        />
+        <Route 
+          path='/profile'   
+          element={<Profile />}
         />
         <Route path='*' Component={NotFoundPage}/>
       </Routes>
