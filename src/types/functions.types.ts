@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { AuthRequest, ICourse, IToken, IUser } from "./interfaces.types";
+import { AuthRequest, ICourse, IEnrollment, IToken, IUser } from "./interfaces.types";
 import { NavigateFunction } from "react-router-dom";
 
 export type AuthProviderProps = {
@@ -39,6 +39,12 @@ export type GetSingleCourseFunctionProps = {
 
 export type GetSingleUserFunctionProps = {
     setStudent: Dispatch<SetStateAction<IUser | undefined>>,
+    token: IToken | null,
+    studentId: string
+}
+
+export type GetEnrollmentsByStudentIdProps = {
+    setEnrollments: Dispatch<SetStateAction<IEnrollment[]>>,
     token: IToken | null,
     studentId: string
 }
