@@ -1,1 +1,75 @@
 @import '../../styles/all';
+
+.account-details {
+    font-family: $primary-font;
+    width: 100%;
+
+    @media screen and (max-width: 1250px) {
+        padding: 0 2rem;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 0 1rem;
+    }
+
+    .account-details-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px 10px;
+    }
+}
+
+.enrollments {
+    font-family: $primary-font;
+    width: 100%;
+
+    @media screen and (max-width: 1250px) {
+        padding: 0 2rem;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 0 1rem;
+    }
+
+    .enrollments-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @media screen and (max-width: $mobile-portrait) {
+            grid-template-columns: 1fr;
+        }
+
+        .no-text {
+            color: $black;
+            font-weight: normal;
+        }
+
+        .enrollments-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            .enrollment-inner {
+                padding: 0 20px 20px 20px;
+
+                .enrollment-up {
+
+                    .enrollment-main-infor {
+
+                    }
+                }
+
+                .enrollment-down {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
