@@ -1,0 +1,48 @@
+@import '../../styles/all';
+
+.course-container {
+    font-family: $primary-font;
+    width: 100%;
+    font-family: $primary-font;
+
+    @media screen and (max-width: 1250px) {
+        padding: 0 2rem;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 0 1rem;
+    }
+
+    .course-container-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        margin-bottom: 30px;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen and (max-width: $mobile-portrait) {
+            grid-template-columns: 1fr;
+        }
+
+        .course-container-left {
+
+            .ins {
+                margin-bottom: 20px;
+            }
+    
+            .timeframe {
+                margin-bottom: 5px;
+                font-weight: normal;
+            }
+        }
+    
+        .course-container-right {
+    
+            .control-button {
+    
+                @media screen and (max-width: $mobile-portrait) {
+                        margin-top: 20px;
+                }
+            }
+        }
+    }
+}

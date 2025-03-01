@@ -7,6 +7,9 @@ const PageHeader = (props: PageHeaderProps) => {
     <div className='page-header'>
       <div className="page-header-inner">
         <h1 className="page-header-title">{props.title}</h1>
+        {
+          props.image && <img className='header-image' src={props.image} alt={props.image} />
+        }
         <h5 className="page-header-description">{props.description}</h5>
       </div>
     </div>

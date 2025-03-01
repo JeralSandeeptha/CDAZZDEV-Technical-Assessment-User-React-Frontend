@@ -30,3 +30,19 @@ export type GetAllCouresFunctionProps = {
     token: IToken | null,
     setCourses: Dispatch<SetStateAction<ICourse[]>>
 }
+
+export type GetSingleCourseFunctionProps = {
+    setCourse: Dispatch<SetStateAction<ICourse | undefined>>,
+    token: IToken | null,
+    courseId: string | undefined
+}
+
+export type EnrollCourseFunctionProps = {
+    token: IToken | null,
+    courseId: string | undefined
+    studentId: string,
+    setIsLoading: Dispatch<SetStateAction<boolean>>,
+    setIsError: Dispatch<SetStateAction<boolean>>,
+    setIsSuccess: Dispatch<SetStateAction<boolean>>,
+    setIsAlreadyEnrolled: Dispatch<SetStateAction<boolean>>,
+}

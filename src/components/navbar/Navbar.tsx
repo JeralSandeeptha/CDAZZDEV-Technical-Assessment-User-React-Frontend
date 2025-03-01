@@ -34,6 +34,9 @@ const Navbar = () => {
                     <Link to='/profile'>
                         <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>My Account</Button>
                     </Link>
+                    <Link to='/dashboard'>
+                        <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>Courses</Button>
+                    </Link>
                     <Tooltip title="Logout" data-testid='tooltip-logout'>
                         <div className="icon-container" onClick={logOutUser}>
                             <img src={logout} alt="logout-icon" className="icon" data-testid='logout'/>
