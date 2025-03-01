@@ -37,6 +37,12 @@ export type GetSingleCourseFunctionProps = {
     courseId: string | undefined
 }
 
+export type GetSingleUserFunctionProps = {
+    setStudent: Dispatch<SetStateAction<IUser | undefined>>,
+    token: IToken | null,
+    studentId: string
+}
+
 export type EnrollCourseFunctionProps = {
     token: IToken | null,
     courseId: string | undefined
