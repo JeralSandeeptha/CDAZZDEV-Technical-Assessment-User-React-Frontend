@@ -8,6 +8,7 @@ import MyCourses from '../pages/my-courses/MyCourses';
 import Profile from '../pages/profile/Profile';
 import PublicRoute from './public-route/PublicRoute';
 import PrivateRoute from './private-route/PrivateRoute';
+import CoursePage from '../pages/course-page/CoursePage';
 
 const MainNavigation = () => {
 
@@ -37,6 +38,10 @@ const MainNavigation = () => {
         <Route 
           path='/profile'   
           element={<PrivateRoute element={<Profile />}/>}
+        />
+        <Route 
+          path='/course/:courseId'   
+          element={<PrivateRoute element={<CoursePage />}/>}
         />
         <Route path='*' Component={NotFoundPage}/>
       </Routes>
