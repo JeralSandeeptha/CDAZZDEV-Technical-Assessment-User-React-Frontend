@@ -1,0 +1,36 @@
+@import '../../styles/all';
+
+.course {
+    border-radius: $border-radius;
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+}
+
+.course-img {
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.course-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $black;
+}
+
+.course-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $black;
+}
+
+.course-instructor {
+    font-weight: normal;
+    color: $black;
+}
+  

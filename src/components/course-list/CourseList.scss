@@ -1,0 +1,49 @@
+@import '../../styles/all';
+
+.course-list {
+    width: 100%;
+    min-height: 20vh;
+    font-family: $primary-font;
+
+    @media screen and (max-width: 1250px) {
+        padding: 0 2rem;
+    }
+    @media screen and (max-width: $mobile) {
+        padding: 0 1rem;
+    }
+
+    .course-list-inner {
+        max-width: 1200px;
+        min-height: 20vh;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .no-content-text {
+            color: $black;
+        }
+
+        .course-lists {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            @media screen and (max-width: 800px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media screen and (max-width: $mobile) {
+                grid-template-columns: 1fr;
+            }
+
+            .course-content {
+                padding: 10px;
+
+                hr {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

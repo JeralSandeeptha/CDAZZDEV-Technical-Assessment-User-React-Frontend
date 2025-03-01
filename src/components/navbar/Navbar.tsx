@@ -31,11 +31,8 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="logo" data-testid='logo'/>
                 </div>
                 <div className='auth-btns'>
-                    <Link to='/account'>
+                    <Link to='/profile'>
                         <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>My Account</Button>
-                    </Link>
-                    <Link to='/account'>
-                        <Button data-testid='loginBtn' type="submit" variant="contained" size="small" className='control-button'>My Courses</Button>
                     </Link>
                     <Tooltip title="Logout" data-testid='tooltip-logout'>
                         <div className="icon-container" onClick={logOutUser}>

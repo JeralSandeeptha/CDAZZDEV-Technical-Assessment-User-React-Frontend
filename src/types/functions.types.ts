@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
-import { AuthRequest, IToken, IUser } from "./interfaces.types";
+import { AuthRequest, ICourse, IToken, IUser } from "./interfaces.types";
 import { NavigateFunction } from "react-router-dom";
 
 export type AuthProviderProps = {
@@ -25,3 +25,8 @@ export type LoginUserFunctionProps = {
 }
 
 export type HandleLoginFunctionProps = { email: string, password: string };
+
+export type GetAllCouresFunctionProps = {
+    token: IToken | null,
+    setCourses: Dispatch<SetStateAction<ICourse[]>>
+}
